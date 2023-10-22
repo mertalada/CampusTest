@@ -5,13 +5,12 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
-// aşağıdaki bütün testlerden @SmokeTest tag i olanları çalıştır. Tag kısmını kaldırdığımızda hepsi çalışır.
+        //İstenilen test ler tag in içine yazılabilir.
         tags = "@Smoke",
-        features = {"src/test/java/FeatureFiles"},
+        features = {"src/test/java/FeaturesFile"},
         glue={"StepDefinitions"},
-        plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}//rapor
+        plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
 
 )
-
 public class TestRunner extends AbstractTestNGCucumberTests {
 }
